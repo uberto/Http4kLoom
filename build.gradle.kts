@@ -17,12 +17,10 @@ repositories {
 }
 
 dependencies {
-        implementation( platform("org.http4k:http4k-bom:4.33.1.0"))
-        implementation ("org.http4k:http4k-core")
-        implementation ("org.http4k:http4k-server-jetty")
-        implementation ("org.http4k:http4k-client-apache")
-
-
+    implementation(platform("org.http4k:http4k-bom:4.33.1.0"))
+    implementation("org.http4k:http4k-core")
+    implementation("org.http4k:http4k-server-jetty")
+    implementation("org.http4k:http4k-client-apache")
 
     testImplementation(kotlin("test"))
     implementation(kotlin("stdlib-jdk8"))

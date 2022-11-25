@@ -37,6 +37,12 @@ class JettyLoom(private val port: Int, override val stopMode: ServerConfig.StopM
             inConnectors.forEach { addConnector(it(this)) }
         })
 
+    constructor(port: Int, threadPool: ThreadPool) : this(
+        port,
+        ServerConfig.StopMode.Graceful(Duration.ofSeconds(5)),
+        Server(threadPool).apply { addConnector(http(port)(this) )}
+    )
+
     init {
         when(stopMode) {
             is ServerConfig.StopMode.Graceful -> {

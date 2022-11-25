@@ -9,13 +9,6 @@ fun testApp(request: Request) =
         .also {
 //            println(Thread.currentThread().isVirtual)
 
-            Thread.sleep(100)//simulating some async operation without cpu load
+            Thread.sleep(10)//simulating some async operation without cpu load
         }
 
-//autocannon -c 10000 -d 10 localhost:9000?name=ubi
-//average 981 req/s with 100ms sleep and 100 connections
-//average 1700 req/s with 100ms sleep and 10000 connections
-
-
-//average 980 req/s with 100ms sleep and 100 connections
-//average 80k req/s with 100ms sleep and 100 connections
