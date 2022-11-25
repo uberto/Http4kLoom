@@ -1,15 +1,18 @@
 # Http4kLoom
 Super simple test to check Http4k with Loom
 
+## How to start
 
-Since current IntelliJ(2022.2.3) doesn't compile for me I measured it launching in a terminal
+You need a Jvm19 or later.
+Either configure IntelliJ to run on language level 19-preview and run Main or use gradle from command line:
 
 ```./gradlew run```
 
-and in anouther terminal
+and in another terminal launch some performance tool like autocannon:
 
 ```autocannon -c 10000 -d 10 localhost:9000?name=ubi```
 
+## Results
 
 Vanilla Http4k-jetty:
 
