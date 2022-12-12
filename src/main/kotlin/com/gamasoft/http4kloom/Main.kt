@@ -26,10 +26,22 @@ fun main() {
 }
 
 
-//autocannon -c 10000 -d 10 localhost:9000?name=ubi
-//average 981 req/s with 100ms sleep and 100 connections
-//average 1700 req/s with 100ms sleep and 10000 connections
+//autocannon -c XXX -d 20 localhost:9000?name=ubi
 
+//normal jetty
+//average 80k req/s with no sleep and 100 connections (top 200% CPU)
+//average 94k req/s with no sleep and 10000 connections (top 200% CPU)
+//average 1970 req/s with 50ms sleep and 100 connections (top 25% CPU)
+//average 3600 req/s with 50ms sleep and 10000 connections (top 80% CPU)
 
-//average 980 req/s with 100ms sleep and 100 connections
-//average 80k req/s with 100ms sleep and 100 connections
+//500T
+//average 80k req/s with no sleep and 100 connections (top 200% CPU)
+//average 94k req/s with no sleep and 10000 connections (top 200% CPU)
+//average 1970 req/s with 50ms sleep and 100 connections (top 35% CPU)
+//average 9500 req/s with 50ms sleep and 10000 connections (top 130% CPU)
+
+//loom
+//average 77k req/s with no sleep and 100 connections (top 250% CPU)
+//average 94k req/s with no sleep and 10000 connections (top 250% CPU)
+//average 1970 req/s with 50ms sleep and 100 connections (top 40% CPU)
+//average 94k req/s with 50ms sleep and 10000 connections (top 400% CPU)

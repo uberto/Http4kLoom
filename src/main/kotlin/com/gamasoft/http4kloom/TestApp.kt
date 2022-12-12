@@ -9,6 +9,6 @@ fun testApp(request: Request) =
         .also {
 //            println(Thread.currentThread().isVirtual)
 
-            Thread.sleep(10)//simulating some async operation without cpu load
+//            Thread.sleep(1)//simulating some async operation without cpu load
         }
 
